@@ -19,18 +19,23 @@ winston.add(
   }
 )
 
+var tplData;
+var tpl = fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
+    tplData = JSON.parse(data);
+})
+
+var convert = require('mathml-to-asciimath');
 
 app.post('/asciimath', function (req, res) {
    // First read existing users.
-   fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
-     data = JSON.parse( data );
       console.log(req.body);
-      console.log(req.body.id);
       winston.info("id: %s", req.body.id);
-      console.log( data );
+      tplData.id = req.body.id;
+      tplData.mathml = req.body.mathml;
+      tplData.asciimath = convert(tplData.mathml);
+      winston.info("asciimath: %s", tplData.asciimath);
       res.contentType('application/json');
-      res.send( JSON.stringify(data));
-   });
+      res.send( JSON.stringify(tplData));
 })
 
 var server = app.listen(8081, function () {
@@ -40,3 +45,4 @@ var server = app.listen(8081, function () {
 //   console.log("math format conversion app listening at http://%s:%s", host, port)
    winston.info("math format conversion app listening at http://%s:%s", host, port);
 })
+
