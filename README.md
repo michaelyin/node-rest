@@ -4,4 +4,4 @@
   npm install body-parser  
   npm install winston  
   npm install mathml-to-asciimath
-
+  npm install cors
