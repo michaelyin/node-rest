@@ -1,6 +1,5 @@
- {
-      "mathml" : "<math xmlns='http://www.w3.org/1998/Math/MathML'><semantics><mrow><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><annotation encoding='TeX'>y = x^{2} + 1</annotation></semantics></math>",
-      "asciimath" : "ascii",
-      "id": "001"
-   }
-
+{
+"mathml": "<math xmlns='http://www.w3.org/1998/Math/MathML'> <mrow> <mi xml:id='y_-1189834118'>y</mi> <mrow> <mi xml:id='=_-1189834117'>=</mi> <msqrt xml:id='\\sqrt_-1189834116'> <mrow> <msup> <mi xml:id='x_-1189834115'>x</mi> <mi xml:id='2_-1189834114'>2</mi> </msup> <mrow> <mi xml:id='+_-1189834113'>+</mi> <mi xml:id='1_-1189834112'>1</mi> </mrow> </mrow> </msqrt> </mrow> </mrow> </math>",
+"asciimath": "( y ( = sqrt ( x ^ 2 ( + 1 ) ) ) )",
+"id": 90
+}
