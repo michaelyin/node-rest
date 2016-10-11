@@ -8,15 +8,21 @@ app.use(cors());
 
 var fs = require("fs");
 
+function myTimestamp() {
+	  return new Date().toString();
+};
+
 var winston = require('winston')
 
 winston.add(
   winston.transports.File, {
     filename: './logs/math.log',
+    timestamp: myTimestamp,
     level: 'info',
-    json: true,
+    maxsize: 5242880, //5MB
+    maxFiles: 5,
+    json: false,
     eol: '\n', // for Windows, or `eol: ‘n’,` for *NIX OSs
-    timestamp: true
   }
 )
 
