@@ -16,10 +16,15 @@ rest service to Convert subset of MathML to ASCIIMathML.
 ```
 
 # run rest svc
+```
 node server.js  
+```
+
 it will listen to port 8081  
 
 there is a log named math.log in ./logs. You may need manually create logs folder for logging to work properly. One time job.
 
 # test
+```
 node client-test.js
+```
